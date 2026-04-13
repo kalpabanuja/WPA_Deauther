@@ -87,6 +87,13 @@
 
 ---
 
+## 🙏 Acknowledgements
+* [RTL8720dn-Deauther](https://github.com/tesa-klebeband/RTL8720dn-Deauther)
+* [cypher-5G-deauther](https://github.com/dkyazzentwatwa/cypher-5G-deauther/)
+* [ambd_sdk Image Tool](https://github.com/ambiot/ambd_sdk)
+
+---
+
 ## 📬 Contact & Support
 Got questions, suggestions, or need help troubleshooting? You can reach out to me through our Telegram group:
 [Join the Telegram Group](https://t.me/+z9nlOraUsKUxNTU9)
