@@ -1,3 +1,5 @@
+This isn't my tool got it from the OFficial AmebaD... !!!
+
 1. Extract the Image_Tool zip File
 
 2. Inside that folder Launch the ImageTool.exe
