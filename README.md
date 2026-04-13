@@ -7,7 +7,6 @@
 ## 🎯 Features
 
 ### 🔴 Red Teaming
-* **Wireless Network Detector / Radar:** Scans BLE, 2.4GHz, and 5GHz Wi-Fi with deep-dive details of individual networks.
 * **Wi-Fi FoxHunting:** Physically track and locate the source of target networks.
 * **Deauthing Attacks:** Selectively target a single user, a single network, or perform a mass deauth on all surrounding networks.
 * **Beacon Spamming:** Flood the area with fake access points to confuse targets.
@@ -15,6 +14,7 @@
 * **4-Way Handshake Capture:** Intercept and capture WPA/WPA2 handshakes for offline cracking.
 
 ### 🔵 Blue Teaming
+* **Wireless Network Detector / Radar:** Scans BLE, 2.4GHz, and 5GHz Wi-Fi with deep-dive details of individual networks.
 * **Wi-Fi Analyzer:** Monitor the surrounding RF environment and channel congestion.
 * **Attack Detection:** Identifies active Spoofing, Deauthentication, and Evil Twin attacks in your vicinity.
 
