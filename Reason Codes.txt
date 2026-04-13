@@ -1,0 +1,36 @@
+Here is the breakdown of the arsenal you see in your config menu:
+
+
+Code 1 (Unspecified Reason): * What it does: The generic "you are disconnected" message.
+
+Why it's good: It's universal. Most clients won't overthink it and will simply drop the connection and attempt a standard re-association, making it highly reliable for capturing WPA handshakes.
+
+
+Code 2 (Previous Authentication No Longer Valid): * What it does: Tells the client device that its authentication token has expired or is corrupt.
+
+Why it's good: This explicitly forces the client to start the authentication process completely from scratch rather than trying a quick resume, ensuring you capture the full 4-way handshake.
+
+
+Code 4 (Disassociated Due to Inactivity): * What it does: Spoofs the router telling the client, "You haven't sent data in a while, so I dropped you to save memory."
+
+Why it's good: Mobile devices (like iPhones and Androids) receive this constantly in the real world to save battery. Their operating systems rarely flag this as suspicious, allowing you to bypass basic frame filters quietly.
+
+
+Code 5 (Disassociated Because AP is Overloaded): * What it does: Tells the client the Access Point cannot handle any more concurrent connections.
+
+Why it's good: Instead of stubbornly trying to reconnect to the exact same access point, the client will often immediately drop and scan the area for a different AP with the same SSID. This is phenomenal if you are simultaneously running an Evil Twin attack.
+
+
+Code 7 (Class 3 Frame Received from Non-Associated STA): * What it does: The AP tells the client, "You are trying to send me internet traffic, but you aren't properly connected yet."
+
+Why it's good: This triggers a hard, immediate drop at the lower network layers. It's very disruptive and hard for client drivers to ignore.
+
+
+Code 8 (Leaving BSS): * What it does: Tells the receiving device that the sender is leaving the area or shutting down.
+
+Why it's good: If you use your tool's "Two-Way" attack feature, spoofing a Code 8 from the Client to the Router is highly effective. The router immediately clears the client from its routing table without asking questions.
+
+
+Code 48 (Robust Management Frame Policy Violation): * What it does: A modern code used in networks utilizing Protected Management Frames (PMF - 802.11w). It signals that a security rule regarding management frames was broken.
+
+Why it's good: While standard deauths (like Code 1) might be ignored by WPA3/PMF-enabled networks, injecting a Code 48 can occasionally trick the router or client into tearing down the connection to protect itself, believing it is under an active downgrade attack.
